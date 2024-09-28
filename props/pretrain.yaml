@@ -1,0 +1,11 @@
+data_path: 'dataset/pretrain/'
+benchmark_filename: [train]
+alias_of_item_id: [item_id_list]
+load_col:
+  inter: [user_id, item_id_list, item_id]
+train_neg_sample_args: ~
+unisrec_transform: plm_emb
+train_batch_size: 4096
+train_stage: pretrain
+pretrain_epochs: 300
+save_step: 50

@@ -1,0 +1,3 @@
+Please download the pre-trained model `UniSRec-FHCKM-300.pth` [Google Drive](https://drive.google.com/drive/folders/1Uik0fMk4oquV_bS9lXTZuExAYbIDkEMW?usp=sharing) and move it here.
+
+We also provide 2 fine-tuned models `UniSRec-Sep-06-2024_16-34-48.pth` and `UniSRec-Sep-10-2024_21-32-33` for allplan data, which can be downloaded from [Syncandshare](https://syncandshare.lrz.de/getlink/fiKVL8z1GxTcvkQadJpmrX/)

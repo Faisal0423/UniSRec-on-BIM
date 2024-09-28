@@ -1,0 +1,23 @@
+data_path: 'dataset/downstream/'
+benchmark_filename: [train, valid, test]
+alias_of_item_id: [item_id_list]
+load_col:
+  inter: [user_id, item_id_list, item_id]
+train_neg_sample_args: ~
+unisrec_transform: ~
+train_batch_size: 1024 # Changed this setting from orginal batch size of 2048
+log_wandb : False #Changed this setting to generate visualization graphs
+topk: [5, 10] #changed it from [10, 50] 
+metrics: [HIT, NDCG]
+valid_metric: NDCG@5
+eval_batch_size: 1024
+stopping_step: 400 #The stopping_step parameter is associated with early stopping mechanisms.
+                  
+                  #The stopping_step value refers to the number of steps 
+                  #or epochs to wait before triggering early stopping if no improvement is observed
+                  
+                  #If stopping_step: 10, this usually means that if the model's performance on 
+                  #a validation set does not improve for 10 consecutive steps or epochs, the training will be halted.
+
+                  # For Anonymous Allplan data I changed this setting to completly run my 300 epochs 
+#learning_rate: 0.01 
