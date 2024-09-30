@@ -5,20 +5,20 @@ load_col:
   inter: [user_id, item_id_list, item_id]
 train_neg_sample_args: ~
 unisrec_transform: ~
-train_batch_size: 1024 # Changed this setting from original batch size of 2048
-log_wandb : False #Changed this setting to generate visualization graphs
-topk: [5, 10] #changed it from [10, 50] 
+train_batch_size: 1024 # Changed this setting from an original batch size of 2048
+log_wandb : False # Changed this setting to generate visualization graphs
+topk: [5, 10] # Changed it from [10, 50] 
 metrics: [HIT, NDCG]
 valid_metric: NDCG@5
 eval_batch_size: 1024
-#learning_rate: 0.01 #We modified the default learning rate i.e. 0.001
-stopping_step: 400 #The stopping_step parameter is associated with early stopping mechanisms.
+#learning_rate: 0.01 #I modified the default learning rate i.e., 0.001 to 0.01
+stopping_step: 400 # The stopping_step parameter is associated with early stopping mechanisms.
                   
-                  #The stopping_step value refers to the number of steps 
+                  # The stopping_step value refers to the number of steps 
                   #or epochs to wait before triggering early stopping if no improvement is observed
                   
-                  #If stopping_step: 10, this usually means that if the model's performance on 
+                  # If stopping_step: 10, this usually means that if the model's performance on 
                   #a validation set does not improve for 10 consecutive steps or epochs, the training will be halted.
 
-                  # For Anonymous Allplan data, we increased the maximum number of epochs from 10 to a value sufficient to complete 300 epochs. 
+                  # For Anonymous Allplan data, I modified the stopping step from 10 to a value sufficient to complete 300 epochs. 
 
