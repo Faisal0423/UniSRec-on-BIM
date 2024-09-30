@@ -11,7 +11,7 @@ topk: [5, 10] # Changed it from [10, 50]
 metrics: [HIT, NDCG]
 valid_metric: NDCG@5
 eval_batch_size: 1024
-#learning_rate: 0.01 #I modified the default learning rate i.e., 0.001 to 0.01
+#learning_rate: 0.01 #We modified the default learning rate, i.e., 0.001 to 0.01, to fine-tune under different learning rates.
 stopping_step: 400 # The stopping_step parameter is associated with early stopping mechanisms.
                   
                   # The stopping_step value refers to the number of steps 
@@ -20,5 +20,5 @@ stopping_step: 400 # The stopping_step parameter is associated with early stoppi
                   # If stopping_step: 10, this usually means that if the model's performance on 
                   #a validation set does not improve for 10 consecutive steps or epochs, the training will be halted.
 
-                  # For Anonymous Allplan data, I modified the stopping step from 10 to a value sufficient to complete 300 epochs. 
+                  # For Anonymous Allplan data, We modified the stopping step from 10 to a value sufficient to complete 300 epochs. 
 
